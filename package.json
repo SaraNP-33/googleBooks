@@ -22,6 +22,8 @@
     "axios": "^0.19.2",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.9.20",
+    "react": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   }
 }

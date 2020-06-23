@@ -1,26 +1,21 @@
-import React, { Component } from "react";
-import API from "../utils/API";
-import Form from "../components/Form";
+import React, { Component } from 'react';
+import Jumbotron from '../components/Jumbotron';
+import Container from '../components/Container';
+
 
 class Search extends Component {
-  state = {
-    searchRes: [],
-    query: "",
-    books: [],
-  };
+    render() {
+        return(
+        <Container>
+        
+        <Jumbotron>
+            <h1 className="display-4 text-danger">This is our Jumbotron</h1>
+        </Jumbotron>
+        </Container>
+        )
+    }
 
-  loadNextSearch = () => {
-    API.Random()
-      .then((res) => {
-        console.log(res);
-      })
-
-      .catch((err) => console.log(err));
-  };
-
-  render() {
-    return <Form></Form>;
-  }
 }
+
 
 export default Search;
