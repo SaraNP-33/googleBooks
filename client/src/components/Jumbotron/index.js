@@ -7,6 +7,7 @@ function Jumbotron({ children }) {
       className="jumbotron text-danger"
     >
       {children}
+      <p>Test</p>
     </div>
   );
 }
