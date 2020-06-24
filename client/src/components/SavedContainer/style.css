@@ -1,0 +1,13 @@
+
+.savedContainer {
+    margin-top: 3vh;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    margin-bottom: 5vh;
+}
+
+.savedContainerTitle {
+    padding-top: 3vh;
+    padding-left: 3vw;
+}

@@ -1,45 +1,16 @@
-import React, { Component } from "react";
-import SearchForm from "./SearchForm";
-import ResultList from "./ResultList";
-import API from "../utils/API";
+import React from "react";
+import './style.css';
 
-class SearchContainer extends Component {
-  state = {
-    search: "",
-    results: [],
-  };
-  // When this component mounts, search the GoogleBooks API for pictures of kittens
-  componentDidMount() {
-    this.searchGoogleBooks("Of Mice and Men");
-  }
-  searchGoogleBooks = (query) => {
-    API.search(query)
-      .then((res) => this.setState({ results: res.data.data }))
-      .catch((err) => console.log(err));
-  };
-  handleInputChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value,
-    });
-  };
-  // When the form is submitted, search the GoogleBooks API for `this.state.search`
-  handleFormSubmit = (event) => {
-    event.preventDefault();
-    this.searchGoogleBooks(this.state.search);
-  };
-  render() {
-    return (
-      <div>
-        <SearchForm
-          search={this.state.search}
-          handleFormSubmit={this.handleFormSubmit}
-          handleInputChange={this.handleInputChange}
-        />
-        <ResultList results={this.state.results} />
-      </div>
-    );
-  }
+function SearchContainer({ children }) {
+  return (
+    <div
+      style={{ height: 200, clear: "both", paddingTop: 20, marginTop: "3vh", textAlign: "left", backgroundColor: "white", border: "1px solid black", borderRadius: "0"}}
+      className="searchContainerTitle"
+    >
+      <h4 className="bookSearchTitle">Book Search</h4>
+      {children}
+    </div>
+  );
 }
+
 export default SearchContainer;
