@@ -9,6 +9,8 @@ function SearchContainer({ children }) {
     >
       <h4 className="bookSearchTitle">Book Search</h4>
       {children}
+
+
     </div>
   );
 }
