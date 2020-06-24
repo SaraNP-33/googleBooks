@@ -4,9 +4,40 @@ import Container from '../components/Container';
 import { Input, FormBtn } from '../components/Form';
 import SearchContainer from '../components/SearchContainer';
 import ResultsContainer from '../components/ResultsContainer';
+import API from '../utils/API';
+
+
+
 
 
 class Search extends Component {
+    state= {
+        search:"",
+        results:{}
+    }
+      // componentDidMount(){
+    //     API.sampleBook()
+    //     .then(res => console.log(res))
+    //     .then(res => this.setState({results:res.data.items[0]}))
+    //     .catch(err => console.log(err))
+    // }
+
+    handleInputChange =(event) =>{
+        const {name,value} =event.target
+
+        this.setState({
+            [name]:value
+        });
+    };
+    handleSubmitSearch=(event) =>{
+        event.preventDefault();
+        API.Random(this.state.search)
+        .then((res)=>this.setState({results:res.data}),()=>console.log(this.state.results))
+    }
+
+  
+        
+    
     render() {
         return(
         <Container>
@@ -16,10 +47,16 @@ class Search extends Component {
             <p>Search for and Save Books of Interest</p>
         </Jumbotron>
         <SearchContainer>
-           <Input/>
-           <FormBtn>Search</FormBtn>
+           <Input
+           value={this.state.search}
+           onChange={this.handleInputChange}
+           name="search"
+           />
+           <FormBtn 
+           handleSubmitSearch={this.handleSubmitSearch}/>
         </SearchContainer>
-        <ResultsContainer/>
+        <ResultsContainer
+        results={this.state.results}/>
         </Container>
         )
     }
