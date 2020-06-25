@@ -7,25 +7,20 @@ import ResultsContainer from '../components/ResultsContainer';
 import API from '../utils/API';
 
 
-
-
-
 class Search extends Component {
     state= {
-        search:"",
+        search:"Oz",
         results:[]
     };
-      // componentDidMount(){
-    //     API.sampleBook()
-    //     .then(res => console.log(res))
-    //     .then(res => this.setState({results:res.data.items[0]}))
-    //     .catch(err => console.log(err))
-    // }
+    
     searchBooks = bookTitle=>{
         API.Random(bookTitle)
-        .then(res=>console.log(res))
-        .then(({res})=>this.setState({results:res}),()=>console.log(this.state.resuts)
+        // .then(res=>console.log(res))
+        .then((res)=>{this.setState({results:res.data.items})
+                        console.log(this.state.results)
+    }
         )
+        .catch(err=>console.log(err))
 
     }
 
@@ -41,9 +36,7 @@ class Search extends Component {
        this.searchBooks(this.state.search)
 
     }
-
-  
-        
+    
     
     render() {
         return(
