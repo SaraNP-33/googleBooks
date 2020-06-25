@@ -14,7 +14,7 @@ export function FormBtn(props) {
     <button
       {...props}
       style={{ float: "right", marginBottom: 10 }}
-      onClick={props.handleSubmitSearch}
+      
       className="btn btn-primary searchBtn"
     >
       {props.children}

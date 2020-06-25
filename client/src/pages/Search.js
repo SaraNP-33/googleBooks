@@ -13,14 +13,21 @@ import API from '../utils/API';
 class Search extends Component {
     state= {
         search:"",
-        results:{}
-    }
+        results:[]
+    };
       // componentDidMount(){
     //     API.sampleBook()
     //     .then(res => console.log(res))
     //     .then(res => this.setState({results:res.data.items[0]}))
     //     .catch(err => console.log(err))
     // }
+    searchBooks = bookTitle=>{
+        API.Random(bookTitle)
+        .then(res=>console.log(res))
+        .then(({res})=>this.setState({results:res}),()=>console.log(this.state.resuts)
+        )
+
+    }
 
     handleInputChange =(event) =>{
         const {name,value} =event.target
@@ -31,8 +38,8 @@ class Search extends Component {
     };
     handleSubmitSearch=(event) =>{
         event.preventDefault();
-        API.Random(this.state.search)
-        .then((res)=>this.setState({results:res.data}),()=>console.log(this.state.results))
+       this.searchBooks(this.state.search)
+
     }
 
   
@@ -53,7 +60,7 @@ class Search extends Component {
            name="search"
            />
            <FormBtn 
-           handleSubmitSearch={this.handleSubmitSearch}/>
+           onClick={this.handleSubmitSearch}/>
         </SearchContainer>
         <ResultsContainer
         results={this.state.results}/>
