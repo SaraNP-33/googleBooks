@@ -1,0 +1,14 @@
+
+
+.card {
+    width: 90%;
+    padding-bottom: 2vh;
+}
+
+.card-image {
+    padding-left: 5vw;
+    width: 70%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    align-self: center;
+}

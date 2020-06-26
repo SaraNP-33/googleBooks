@@ -1,27 +1,39 @@
 import React from "react";
+import "./style.css";
 
-function BookCard(props){
-    return(
-        <div className="card mb-3" style={{maxWidth: 540}}>
-        <div className="row no-gutters">
-          <div className="col-md-4"></div>
+function BookCard(props) {
+  return (
+    <div className="card mb-3">
+      <div className="row no-gutters">
+        <div className="col-sm-3">
           <img
             alt={props.title}
-            className="img-fluid card-image"
-            key src={props.src}
-            style={{ margin: "0 auto"}}
+            className="img-fluid card-image mt-3"
+            key
+            src={props.src}
           />
         </div>
-        <div className="col-md-8">
+        <div className="col-sm-9">
           <div className="card-body">
-            <h3 className="card-title">Title: {props.title}</h3>
+            <h3 className="card-title">{props.title}</h3>
             <h4 className="card-text">Author: {props.author}</h4>
-            <h4 className="card-text">Description: {props.description}</h4>
-            <h5 className="card-text">Link: {props.link}</h5>
+            <h6 className="card-text">{props.description}</h6>
+            <div className="link"><a className="card-link" href={props.link} target="_blank">
+              Click to learn more!
+            </a>
+            <button
+              style={{ float: "right", marginBottom: 10 }}
+              className="btn btn-primary saveBtn"
+              onClick= {props.saveBtn}
+            >
+              Save
+            </button>
+            </div>
           </div>
         </div>
       </div>
-    );
-};
+    </div>
+  );
+}
 
 export default BookCard;

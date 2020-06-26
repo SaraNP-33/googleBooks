@@ -62,7 +62,7 @@ class Search extends Component {
             key={book.id}
             src={book.volumeInfo.imageLinks.thumbnail}
             title={book.volumeInfo.title}
-            author={book.volumeInfo.author}
+            author={book.volumeInfo.authors}
             description={book.volumeInfo.description}
             link={book.volumeInfo.infoLink}
             />
