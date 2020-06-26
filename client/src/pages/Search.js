@@ -4,6 +4,7 @@ import Container from '../components/Container';
 import { Input, FormBtn } from '../components/Form';
 import SearchContainer from '../components/SearchContainer';
 import ResultsContainer from '../components/ResultsContainer';
+import BookCard from '../components/BookCard';
 import API from '../utils/API';
 
 
@@ -55,8 +56,18 @@ class Search extends Component {
            <FormBtn 
            onClick={this.handleSubmitSearch}/>
         </SearchContainer>
-        <ResultsContainer
-        results={this.state.results}/>
+        <ResultsContainer>
+            {this.state.results.map((book)=>(
+            <BookCard
+            key={book.id}
+            src={book.volumeInfo.imageLinks.thumbnail}
+            title={book.volumeInfo.title}
+            author={book.volumeInfo.author}
+            description={book.volumeInfo.description}
+            link={book.volumeInfo.infoLink}
+            />
+            ))}
+        </ResultsContainer>
         </Container>
         )
     }
