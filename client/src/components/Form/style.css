@@ -1,14 +1,19 @@
-
-
-.label {
-    padding-left: 5vw;
+form{
+    background: #5F0F40;
+    border-radius: 2px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.userInput {
-    width: 90%;
-    margin: 0 auto;
+.BookSearchLabel{
+    margin-left:20px;
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-.searchBtn {
-    margin-right: 5vw;
+.submitBtn{
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-control{
+    margin-left: 20px;
+    width: 95%
 }

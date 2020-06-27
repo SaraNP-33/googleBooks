@@ -1,4 +1,16 @@
+.navbar {
+    background-color: #5F0F40;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 
-.navSearch {
-    text-align: left;
+.navbar-brand {
+color: whitesmoke
+}
+
+#btnSearch {
+    background-color: #E9C46A
+}
+
+#btnSaved {
+    background-color: #0F4C5C
 }

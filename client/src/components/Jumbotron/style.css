@@ -1,0 +1,11 @@
+.jumbotron{
+    background-image: url("https://images-cdn.brightedge.com/f00000000036389/videos.brightedge.com/Images/marketing-books-hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px; 
+    width: 100%;
+    padding-top: 10; 
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
