@@ -14,6 +14,18 @@ export default {
         bookTitle +
         "&key=" + process.env.REACT_APP_GOOGLE_BOOKS_QUEENS
     );
+  } , 
+
+  saveBook:function(bookData){
+    return axios.post("/api/books", bookData);
+  },
+
+  findBookd: function(){
+    return axios.get("/api/books")
   }
   
 };
+
+
+
+

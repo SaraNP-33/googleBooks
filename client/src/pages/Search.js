@@ -14,6 +14,7 @@ class Search extends Component {
         results:[]
     };
     
+    //function to connect to the axios call and carry the query to google books api
     searchBooks = bookTitle=>{
         API.Random(bookTitle)
         // .then(res=>console.log(res))
@@ -24,7 +25,7 @@ class Search extends Component {
         .catch(err=>console.log(err))
 
     }
-
+//function to have what is written in the search input to be tracked
     handleInputChange =(event) =>{
         const {name,value} =event.target
 
@@ -32,10 +33,26 @@ class Search extends Component {
             [name]:value
         });
     };
+    //function to when we hit the button our search param is sent to our query and gives back the books results.
     handleSubmitSearch=(event) =>{
         event.preventDefault();
        this.searchBooks(this.state.search)
 
+    };
+    //allow user to save a book
+    // eslint-disable-next-line
+    handleSaveBook= function(id){
+     
+        const bookToSave= {
+            src:this.state.results.volumeInfo.imageLinks.thumbnail,
+            title:this.state.results.volumeInfo.title,
+            author:this.state.results.volumeInfo.authors,
+            description:this.state.results.volumeInfo.description,
+            link:this.state.results.volumeInfo.infoLink
+        };
+        console.log("click saveBtn")
+        API.saveBook(bookToSave)
+        .then((res)=>console.log(res))
     }
     
     
@@ -58,6 +75,7 @@ class Search extends Component {
         </SearchContainer>
         <ResultsContainer>
             {this.state.results.map((book)=>(
+                
             <BookCard
             key={book.id}
             src={book.volumeInfo.imageLinks.thumbnail}
@@ -65,6 +83,7 @@ class Search extends Component {
             author={book.volumeInfo.authors}
             description={book.volumeInfo.description}
             link={book.volumeInfo.infoLink}
+            onClick={this.handleSaveBook}
             />
             ))}
         </ResultsContainer>

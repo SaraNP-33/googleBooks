@@ -16,7 +16,7 @@ function BookCard(props) {
         <div className="col-sm-9">
           <div className="card-body">
             <h3 className="card-title">{props.title}</h3>
-            <h4 className="card-text">Author: {props.author}</h4>
+            <h5 className="card-text">Written by {props.author}</h5>
             <h6 className="card-text">{props.description}</h6>
             <div className="link"><a className="card-link" href={props.link} target="_blank">
               Click to learn more!
