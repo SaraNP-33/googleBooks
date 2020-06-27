@@ -1,97 +1,95 @@
-import React, { Component } from 'react';
-import Jumbotron from '../components/Jumbotron';
-import Container from '../components/Container';
-import { Input, FormBtn } from '../components/Form';
-import SearchContainer from '../components/SearchContainer';
-import ResultsContainer from '../components/ResultsContainer';
-import BookCard from '../components/BookCard';
-import API from '../utils/API';
+import React, { Component } from "react";
+import API from "../utils/API";
+import Jumbotron from "../components/Jumbotron";
+import { Container, Row, Col } from "../components/Grid";
+import Form from "../components/Form";
+import Search from "../components/Search"
 
 
-class Search extends Component {
-    state= {
-        search:"Oz",
-        results:[]
+class SearchBooks extends Component {
+    //initial state
+    state = {
+        search: "",
+        books: [],
+        error: "",
+        message: ""
     };
-    
-    //function to connect to the axios call and carry the query to google books api
-    searchBooks = bookTitle=>{
-        API.Random(bookTitle)
-        // .then(res=>console.log(res))
-        .then((res)=>{this.setState({results:res.data.items})
-                        console.log(this.state.results)
-    }
-        )
-        .catch(err=>console.log(err))
 
+    //function for search bar
+    handleInputChange = event => {
+        this.setState({ search: event.target.value })
     }
-//function to have what is written in the search input to be tracked
-    handleInputChange =(event) =>{
-        const {name,value} =event.target
 
-        this.setState({
-            [name]:value
-        });
-    };
-    //function to when we hit the button our search param is sent to our query and gives back the books results.
-    handleSubmitSearch=(event) =>{
+    //function for submit button on search form 
+    handleFormSubmit = event => {
         event.preventDefault();
-       this.searchBooks(this.state.search)
-
-    };
-    //allow user to save a book
-    // eslint-disable-next-line
-    handleSaveBook= function(id){
-     
-        const bookToSave= {
-            src:this.state.results.volumeInfo.imageLinks.thumbnail,
-            title:this.state.results.volumeInfo.title,
-            author:this.state.results.volumeInfo.authors,
-            description:this.state.results.volumeInfo.description,
-            link:this.state.results.volumeInfo.infoLink
-        };
-        console.log("click saveBtn")
-        API.saveBook(bookToSave)
-        .then((res)=>console.log(res))
+        // once it clicks it connects to the google book api with the search value
+        API.getGoogleSearchBooks(this.state.search)
+            .then(res => {
+                if (res.data.items === "error") {
+                    throw new Error(res.data.items);
+                }
+                else {
+                    // store response in a array
+                    let results = res.data.items
+                    //map through array 
+                    results = results.map(result => {
+                        //store each book in a new object 
+                        result = {
+                            key: result.id,
+                            id: result.id,
+                            title: result.volumeInfo.title,
+                            author: result.volumeInfo.authors,
+                            description: result.volumeInfo.description,
+                            image: result.volumeInfo.imageLinks.thumbnail,
+                            link: result.volumeInfo.infoLink
+                        }
+                        return result;
+                    })
+                    // reset state
+                    this.setState({ books: results, error: "" })
+                }
+            })
+            .catch(err => this.setState({ error: err.items }));
     }
-    
-    
+
+    handleSavedButton = event => {
+        // console.log(event)
+        event.preventDefault();
+        console.log(this.state.books)
+        console.log(event.target.id)
+        let savedBooks = this.state.books.filter(book => book.id === event.target.id)
+        savedBooks = savedBooks[0];
+        console.log(savedBooks)
+        API.saveBook(savedBooks)
+        .then(this.setState({ message: alert("Your book is saved") })).catch(err => console.log("ERROR", err))
+    }
     render() {
-        return(
-        <Container>
-        
-        <Jumbotron>
-            <h3 className="display-4">Google Books Search</h3>
-            <p>Search for and Save Books of Interest</p>
-        </Jumbotron>
-        <SearchContainer>
-           <Input
-           value={this.state.search}
-           onChange={this.handleInputChange}
-           name="search"
-           />
-           <FormBtn 
-           onClick={this.handleSubmitSearch}/>
-        </SearchContainer>
-        <ResultsContainer>
-            {this.state.results.map((book)=>(
-                
-            <BookCard
-            key={book.id}
-            src={book.volumeInfo.imageLinks.thumbnail}
-            title={book.volumeInfo.title}
-            author={book.volumeInfo.authors}
-            description={book.volumeInfo.description}
-            link={book.volumeInfo.infoLink}
-            onClick={this.handleSaveBook}
-            />
-            ))}
-        </ResultsContainer>
-        </Container>
+        return (
+            <Container fluid>
+                <Jumbotron>
+                    <h1 className="text-white">Google Books Search</h1>
+                    <h3 className="text-white">Search for and Save Books of Interest</h3>
+                </Jumbotron>
+                <Container>
+                    <Row>
+                        <Col size="12">
+                            <Form
+                                handleFormSubmit={this.handleFormSubmit}
+                                handleInputChange={this.handleInputChange}
+                            />
+                        </Col>
+                    </Row>
+                </Container>
+                <br></br>
+                <Container>
+                    <Search books={this.state.books} handleSavedButton={this.handleSavedButton} />
+                </Container>
+            </Container>
         )
     }
+
 
 }
 
-
-export default Search;
+export default SearchBooks
