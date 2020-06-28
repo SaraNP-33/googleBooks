@@ -16,25 +16,19 @@
   margin-left: 10px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  background-color: #418080 !important;
 }
 
 .viewBook {
   margin-left: 5px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  background-color: #486666 !important;
 }
 
 #results {
-  color: whitesmoke;
-}
-
-.btn-light {
-  background-color: #0f4c5c;
-  color: whitesmoke;
-}
-
-.btn-light-2 {
-  background-color: #e9c46a;
   color: whitesmoke;
 }
 

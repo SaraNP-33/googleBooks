@@ -1,69 +1,80 @@
 import React from "react";
-import "./style.css"
-import { Row, Col } from "../Grid"
+import "./style.css";
+import { Row, Col } from "../Grid";
 
-const Saved = props => {
-    return (props.savedBooks.length === 0) ? (
-        <div className="card">
-            <div className="card-body player">
-                <div className="article">
-                    <h2 id="results">Saved Books</h2>
-                </div>
-            </div>
+const Saved = (props) => {
+  return props.savedBooks.length === 0 ? (
+    <div className="card">
+      <div className="card-body player">
+        <div className="article">
+          <h2 id="results">Saved Books</h2>
         </div>
-    ) : (
-        <div className="card">
-            <div className="card-body player">
-                <div className="article">
-                    <h2>Saved Books</h2>
-                        {props.savedBooks.map(savedbook => {
-                        return (
+      </div>
+    </div>
+  ) : (
+    <div className="card">
+      <div className="card-body player">
+        <div className="article">
+          <h2>Saved Books</h2>
+          {props.savedBooks.map((savedbook) => {
+            return (
+              <>
+                <li className="saved-list list-group-item mb-4">
+                  <Row
+                    className="SearchResult"
+                    id={savedbook.title + "Card"}
+                    key={savedbook._id}
+                  >
+                    {/* col-3 show image of the book */}
 
-                        <li className="saved-list list-group-item">
-                            
-                            <Row className="SearchResult" id={savedbook.title + "Card"} key={savedbook._id}>
-                                {/* col-3 show image of the book */}
-                                        
-                                <Col size="2" className="bookImage">
-                                    <img src={savedbook.image} alt={savedbook.title} />
-                                </Col>
+                    <Col size="2" className="bookImage">
+                      <img src={savedbook.image} alt={savedbook.title} />
+                    </Col>
 
-                                <Col size="1" className="emptyCol" />
-                                    {/* col-9 show information of the book */}
-                                <Col size="9" className="bookInfo">
-                                    
-                                    <Row>
-                                        <h3 className="bookTitle">{savedbook.title}</h3>
-                                    </Row>
+                    <Col size="1" className="emptyCol" />
+                    {/* col-9 show information of the book */}
+                    <Col size="9" className="bookInfo">
+                      <Row>
+                        <h3 className="bookTitle">{savedbook.title}</h3>
+                      </Row>
 
-                                    <Row>
-                                        <h3 className="bookAuthor">{savedbook.authors}</h3>
-                                    </Row>
+                      <Row>
+                        <h3 className="bookAuthor">{savedbook.authors}</h3>
+                      </Row>
 
-                                    <Row>
-                                        <p className="bookDescription">{savedbook.description}</p>
-                                    </Row>
-                                </Col>
-                            </Row>
+                      <Row>
+                        <p className="bookDescription text-truncate">
+                          {savedbook.description}
+                        </p>
+                      </Row>
+                    </Col>
+                  </Row>
+                  <br></br>
+                  <Row className="buttonDiv">
+                    <button
+                      href={savedbook.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="viewBook btn ml-auto"
+                    >
+                      View Book
+                    </button>
 
-                            <br></br>
-                            <Row className="buttonDiv ">
-                                <button className="deleteBook btn btn-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
-                                    Delete Book
-                                </button>
-
-                                <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
-                                    <button className="viewBook btn btn-light-2">
-                                        View Book
-                                    </button>
-                                </a>
-                            </Row>
-                        </li>
-                        );
-                    })}
-                </div>
-            </div>
+                    <button
+                      className="deleteBook btn mr-3"
+                      id={savedbook._id}
+                      onClick={() => props.handleDeleteButton(savedbook._id)}
+                    >
+                      Delete Book
+                    </button>
+                  </Row>
+                </li>
+              </>
+            );
+          })}
         </div>
-        )
-}
-export default Saved
+      </div>
+    </div>
+  );
+};
+export default Saved;
