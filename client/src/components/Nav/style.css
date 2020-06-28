@@ -1,16 +1,25 @@
 .navbar {
-    background-color: #5F0F40;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  background-color: #486666;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .navbar-brand {
-color: whitesmoke
+  color: whitesmoke;
 }
 
 #btnSearch {
-    background-color: #E9C46A
+  color: whitesmoke;
+  /* text-decoration: none; */
 }
 
 #btnSaved {
-    background-color: #0F4C5C
+  color: whitesmoke;
+  /* background-color: #0f4c5c; */
+}
+
+.burger {
+  color: white;
+  /* background-color: white; */
+  /* z-index: 999; */
 }

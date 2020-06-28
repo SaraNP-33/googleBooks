@@ -1,35 +1,39 @@
-.card{
-    background-color: #5F0F40;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 20px;
+.card {
+  background-color: #664857;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 20px;
 }
 
-.search-list{
-    padding: 20px;
-    background-color: #e5e8ed;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+.search-list {
+  padding: 20px;
+  background-color: #e5e8ed;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .saveBook {
-    margin-left: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  margin-left: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .viewBook {
-    margin-left: 5px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  margin-left: 5px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 h2 {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 .btn-light {
-    background-color: #0F4C5C;
-    color: whitesmoke;
+  background-color: #0f4c5c;
+  color: whitesmoke;
 }
 
 .btn-light-2 {
-    background-color: #E9C46A;
-    color: whitesmoke;
+  background-color: #e9c46a;
+  color: whitesmoke;
 }
