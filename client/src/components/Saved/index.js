@@ -51,15 +51,15 @@ const Saved = (props) => {
                   </Row>
                   <br></br>
                   <Row className="buttonDiv">
-                    <button
+                    <a
                       href={savedbook.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="viewBook btn ml-auto"
                     >
-                      View Book
-                    </button>
-
+                      <button className="viewBook btn ml-auto">
+                        View Book
+                      </button>
+                    </a>
                     <button
                       className="deleteBook btn mr-3"
                       id={savedbook._id}
