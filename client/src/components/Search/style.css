@@ -29,11 +29,11 @@ h2 {
 }
 
 .btn-light {
-  background-color: #0f4c5c;
+  background-color: #486666 !important;
   color: whitesmoke;
 }
 
-.btn-light-2 {
-  background-color: #e9c46a;
+.viewBtn {
+  background-color: #418080 !important;
   color: whitesmoke;
 }

@@ -4,7 +4,7 @@ import "./style.css";
 function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark">
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand ml-5" href="/">
         GOOGLE BOOKS
       </a>
       <button
@@ -19,14 +19,14 @@ function Nav() {
         <span className="navbar-toggler-icon text-white"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
+        <ul className="navbar-nav d-flex  ml-auto mt-2 mt-lg-0">
           <li className="nav-item" id="home">
             <a className="nav-link" href="/" id="btnSearch">
               Search
             </a>
           </li>
 
-          <li className="nav-item" id="report">
+          <li className="nav-item mr-5" id="report">
             <a className="nav-link" href="/saved" id="btnSaved">
               Saved
             </a>
