@@ -40,7 +40,9 @@ const Search = (props) => {
                     </Row>
 
                     <Row>
-                      <p className="bookDescription">{book.description}</p>
+                      <p className="bookDescription text-truncate">
+                        {book.description}
+                      </p>
                     </Row>
                   </Col>
                 </Row>
