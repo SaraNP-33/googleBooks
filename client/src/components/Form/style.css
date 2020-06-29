@@ -28,3 +28,11 @@ form {
 .input {
   width: 90%;
 }
+
+
+@media (max-width: 991px) {
+  .searchTitle {
+    margin-left: 3.5vw !important;
+    margin-right: 3.5vw !important;
+  }
+}

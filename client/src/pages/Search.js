@@ -4,7 +4,8 @@ import Jumbotron from "../components/Jumbotron";
 import { Container, Row, Col } from "../components/Grid";
 import Form from "../components/Form";
 import Search from "../components/Search";
-import Nav from "../components/Nav"
+import Nav from "../components/Nav";
+// import Footer from "../components/Footer"
 
 class SearchBooks extends Component {
   //initial state
@@ -79,12 +80,8 @@ class SearchBooks extends Component {
   render() {
     return (
       <>
-      <Nav />
-        <Jumbotron>
-          <h1 className="text-white pt-5 shadow">Google Books</h1>
-          <h3 className="text-white pt-5">Find and Save Books of Interest</h3>
-        </Jumbotron>
-
+      <Nav/>
+        <Jumbotron/>
         <Container>
           <Row>
             <Col size="12">
@@ -102,6 +99,7 @@ class SearchBooks extends Component {
             handleSavedButton={this.handleSavedButton}
           />
         </Container>
+        {/* <Footer/> */}
       </>
     );
   }

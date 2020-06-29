@@ -2,11 +2,7 @@
   font-family: 'Montserrat', sans-serif;
   color: #636d68;
   }
-
-.searchContainer {
-  padding-bottom: 7vh;
-}
-
+  
 .card {
   width: 100%;
   padding-bottom: 2vh;
@@ -28,7 +24,6 @@
 .saveBook {
   background-color: #608773;
   color: white;
-  /* height: 80%; */
 }
 
 .saveBook:hover {
@@ -58,8 +53,4 @@
   background-color: #C47E9E !important;
   color: white !important;
   font-size: 1rem;
-}
-
-#results {
-  color:#636d68;
 }

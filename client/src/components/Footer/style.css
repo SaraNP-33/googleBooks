@@ -1,0 +1,21 @@
+.footer {
+    height: 5vh;
+    background-color: #636D68;
+    width: 100%;
+    /* margin-top: 15vh; */
+    /* margin-bottom: 0vh !important; */
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.builtBy {
+    padding-top: 1.2vh;
+    color: white;
+}
+
+
+
