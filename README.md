@@ -79,5 +79,11 @@ Just as we did with concurrently, in order for this package to work we need to m
 
 To make this application functional, there is a lot of code and logic behind it to make it work. However, sometimes the beauty is in the details. Here we want to highlight how when the user clicks ![save](./images/savebtn.png) , the button text changes to ![saved](./images/saved2.png).
 
+The first step was to alter how we were rendering the text in the button. Before we had it just hard text coded in a component. 
 
+To make it possible to change it when clicked, we included the button text inside out object results from the API request like so:
+
+![btnText](./images/BtnText.png)
+
+If you look at the last line of out result object, you will see the buttonText property that have the text we want to see displayed.
 
