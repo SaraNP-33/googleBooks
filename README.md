@@ -87,3 +87,8 @@ To make it possible to change it when clicked, we included the button text insid
 
 If you look at the last line of out result object, you will see the buttonText property that have the text we want to see displayed.
 
+The next step was to go to the component where this button is being rendered and make sure to "tell it" to render the text assigned in the buttonText property.
+
+![btnComp](./images/btnComp.png)
+
+On line 35, instead of writing **Save****Book**, we pointed to the object property that contained that text. 
