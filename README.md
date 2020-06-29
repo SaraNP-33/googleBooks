@@ -5,4 +5,4 @@ To accomplishe this, this app uses axios to call on the Google Books api and del
 
 ## Sample Images
 
-![searchBooks](./images/searchBooks.gif)
+![searchBooks](./images/searchBook.gif)
