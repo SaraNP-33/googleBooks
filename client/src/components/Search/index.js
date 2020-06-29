@@ -20,23 +20,27 @@ const Search = (props) => {
                 <div className="col-sm-9">
                   <div className="card-body">
                     <h3 className="card-title">{book.title}</h3>
-                    <h4 className="card-text">Author: {book.author}</h4>
+                    <h4 className="card-text">Written by {book.author}</h4>
                     <h6 className="card-text">{book.description}</h6>
+                    <a href={book.link} target="_blank" rel="noopener noreferrer">
+                    More details...
+                    </a>
                   </div>
                 </div>
+                
                 <button
-                  className="saveBook btn btn-light ml-auto"
-                  id={book.id}
+                  className="saveBook btn btn-light ml-auto mr-2"
+                  id={book.id} 
                   onClick={(event) => props.handleSavedButton(event)}
-                >
-                  Save Book
+                > Save Book
                 </button>
 
-                <a href={book.link} target="_blank" rel="noopener noreferrer">
-                  <button className="viewBook btn btn-light viewBtn ml-auto mr-3">
-                    View Book
-                  </button>
+                <a href="/saved">
+                <button className="viewSavedBtn btn btn-light ml-auto mr-3">
+                View Saved Books
+                </button>
                 </a>
+
               </div>
             </div>
             

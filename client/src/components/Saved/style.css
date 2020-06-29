@@ -24,15 +24,29 @@
   color: #636d68;
 }
 
-.deleteBook {
-  background-color: #608773;
-  color: white;
-  margin-right: 3vw;
+.btnRow {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.viewBook {
+.deleteBook {
+  margin-left: 10px;
+  background-color: #608773;
+  color: white;
+}
+
+.backToSearchBtn {
+  margin-left: 5px;
+  background-color: #C47E9E !important;
+  color: white
+}
+
+.backToSearchBtn:hover {
+  margin-left: 5px;
   background-color: #C47E9E !important;
   color: white;
+  font-size: 1.05rem;
 }
 
 

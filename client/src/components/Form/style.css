@@ -2,10 +2,13 @@ form {
   border-radius: 5px;
   border: 2px solid #636d68;
 }
+
 .BookSearchLabel {
-  margin-left: 3vw;;
-  margin-top: 2vh;;
+  margin-left: 2vw;;
+  margin-top: 2vh;
+  color: #636d68;
 }
+
 .submitBtn {
   background-color: #608773 !important;
   color: white;
@@ -16,15 +19,6 @@ form {
   font-size: 1.1rem;
 }
 
-.form-control {
-  margin-left: 20px;
-  width: 95%;
-}
-
 .input {
   width: 90%;
-}
-
-h2{
-  color: #636d68;
 }

@@ -24,22 +24,27 @@ const Saved = (props) => {
                     <h3 className="card-title">{savedbook.title}</h3>
                     <h4 className="card-text">Author: {savedbook.author}</h4>
                     <h6 className="card-text">{savedbook.description}</h6>
+                    <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
+                    More details...
+                    </a>
                   </div>
                 </div>
 
-                <a href={savedbook.link} target="_blank" rel="noopener noreferrer">
-                  <button className="viewBook btn btn-light">
-                    View Book
+                <div className = "row btnRow">
+                <a href="/">
+                <button className="backToSearchBtn btn btn-light viewBtn ml-auto mr-2">
+                    Back to Search Page
                   </button>
                 </a>
 
                 <button
-                  className="deleteBook btn btn-light ml-auto"
+                  className="saveBook btn btn-light mr-3"
                   id={savedbook._id}
                   onClick={() => props.handleDeleteButton(savedbook._id)}
                 >
                   Delete Book
                 </button>
+                </div>
                 </div>
             </div>
           );

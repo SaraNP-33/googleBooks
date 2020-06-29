@@ -26,14 +26,26 @@
 
 
 .saveBook {
-  margin-left: 10px;
   background-color: #608773;
+  color: white;
+  /* height: 80%; */
+}
+
+.saveBook:hover {
+  background-color: #608773;
+  color: white;
+  font-size: 1.05rem;
+}
+
+.viewSavedBtn {
+  background-color: #C47E9E !important;
   color: white;
 }
 
-.viewBook {
-  margin-left: 5px;
+.viewSavedBtn:hover {
   background-color: #C47E9E !important;
+  color: white;
+  font-size: 1.05rem;
 }
 
 #results {

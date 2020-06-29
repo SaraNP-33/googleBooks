@@ -22,7 +22,7 @@ const Form = (props) => {
       <div className="form-group row col-sm-12 justify-content-end">
         <button
           type="submit"
-          className="btn btn-light submitBtn mb-3 mr-3"
+          className="btn btn-light submitBtn mb-3 mr-2"
           onClick={props.handleFormSubmit}
         >
           Search
