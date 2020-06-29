@@ -1,7 +1,7 @@
 # Google Book Search
 
 This app allows users to search for any book and save their favorite ones, and eventually delete them if they so choose too.  
-To accomplish this, this app uses axios to call on the Google Books api and deliver the content the user is searching for, MongoDb as the nonrelational database used to store the user's favorite books and React to create the beautifully functional front-end. To enable the communication between our front-end and our back-end database, we use Express as our server and Mongoose to create our database Schema. 
+To accomplish this, this app uses axios to call on the Google Books API and deliver the content the user is searching for, **MongoDb** as the nonrelational database used to store the user's favorite books and **React** to create the beautifully functional front-end. To enable the communication between our front-end and our back-end database, we use **Express** as our server and **Mongoose** to create our database Schema. 
 
 ## Sample Images
 
@@ -91,4 +91,44 @@ The next step was to go to the component where this button is being rendered and
 
 ![btnComp](./images/btnComp.png)
 
-On line 35, instead of writing **Save****Book**, we pointed to the object property that contained that text. 
+On line 35, instead of writing **Save Book**, we pointed to the object property that contained that text. 
+
+Lastly, we had to include code in the function that handled our **Save Button**
+
+![btnTextChange](./images/btnChangeText.png)
+
+starting on line 67, we added a callback function that passes a map function. This allows to iterate over every ***Save Book*** button. 
+Inside our map function we have created a if/else statement. If a button linked to a specific ID is clicked then we want to take evertyhting from that book (this is what the **...book** means), and also we want the buttonText to change to Save. 
+If the button is not clicked then just render the regular text.
+
+### Why highlight this?
+ 
+ We decided to highlight this portion of our code, because as React beginners we know there are ways to create the same effects or the same results as we previously did with html templates. The difference lies on how to tell the application how to do it.
+
+# Technologies Used:  
+
+ + [React](https://reactjs.org/) 
+ - [React-Router-Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+ + [Bootstrap](https://getbootstrap.com/)
+ - [Axios](https://www.npmjs.com/package/axios)
+ + [Express](https://www.npmjs.com/package/express)
+ - [Mongo](https://www.mongodb.com/)
+ + [Mongoose](https://mongoosejs.com/docs/guide.html)
+ - [Concurrently](https://www.npmjs.com/package/concurrently)
+ + [if-env](https://www.npmjs.com/package/if-env)
+ - [nodemon](https://www.npmjs.com/package/nodemon)
+
+ # Deployment
+
+ Our application was deployed in Heroku. Feel free to visit by clicking the link below.
+
+ [Google Books](https://google-books-search-171113.herokuapp.com/)
+
+# Authors
++ Lindsey Tummond: [Portfolio]( https://lindseytummond.github.io/portfolio/)
+- Niasha Ablago-Grant: [Portfolio]
++ Jennifer Kruk : [Portfolio](https://jenkruk.github.io/Portfolio/)
+- Sara Neves Pereira: [Portfolio]( https://saranp-33.github.io/bootstrap-portfolio/)
+
+# License
+This project is licensed under the MIT License
