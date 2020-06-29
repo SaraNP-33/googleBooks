@@ -98,7 +98,7 @@ Lastly, we had to include code in the function that handled our **Save Button**
 
 ![btnTextChange](./images/btnChangeText.png)
 
-starting on line 67, we added a callback function that passes a map function. This allows to iterate over every ***Save Book*** button. 
+starting on line 67, we added a callback function that passes a map function. This allows to iterate over every **Save Book** button. 
 Inside our map function we have created a if/else statement. If a button linked to a specific ID is clicked then we want to take evertyhting from that book (this is what the **...book** means), and also we want the buttonText to change to Save. 
 If the button is not clicked then just render the regular text.
 
