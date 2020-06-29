@@ -3,10 +3,11 @@ form {
   border: 2px solid #636d68;
 }
 
-.BookSearchLabel {
+.searchTitle {
   margin-left: 2vw;;
   margin-top: 2vh;
   color: #636d68;
+  text-align: center;
 }
 
 .submitBtn {

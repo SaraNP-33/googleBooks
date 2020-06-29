@@ -6,7 +6,7 @@ const Form = (props) => {
     <form>
       <div className="form-group row">
         <label className="BookSearchLabel">
-          <h2 className="ml-3">Book Search</h2>
+          <h2 className="searchTitle ml-5">Enter a Book Title or Author Name</h2>
         </label>
       </div>
       <div className="form-group row">

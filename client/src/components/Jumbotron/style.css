@@ -13,3 +13,8 @@
   border-radius: 0;
   /* margin-top: -6vh; */
 }
+
+.jumboTitle,
+.jumboText {
+  text-shadow: 2px 3px 4px #000000;
+}

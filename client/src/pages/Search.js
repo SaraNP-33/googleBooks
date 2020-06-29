@@ -81,8 +81,8 @@ class SearchBooks extends Component {
       <>
       <Nav />
         <Jumbotron>
-          <h1 className="text-white pt-5">Google Books Search</h1>
-          <h3 className="text-white pt-5">Search for and Save Books of Interest</h3>
+          <h1 className="text-white pt-5 shadow">Google Books</h1>
+          <h3 className="text-white pt-5">Find and Save Books of Interest</h3>
         </Jumbotron>
 
         <Container>

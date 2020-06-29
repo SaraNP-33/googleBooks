@@ -28,10 +28,7 @@ class SaveBook extends Component {
     return (
       <>
       <Nav/>
-        <Jumbotron>
-          <h1 className="text-white pt-5">Google Books Search</h1>
-          <h3 className="text-white pt-5">Search for and Save Books of Interest</h3>
-        </Jumbotron>
+        <Jumbotron/>
 
         <Container>
           <Saved

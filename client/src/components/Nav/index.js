@@ -25,7 +25,7 @@ function Nav() {
         <ul className="navbar-nav d-flex  ml-auto mt-2 mt-lg-0">
           <li className="nav-item" id="home">
             <a className="nav-link mr-4" href="/" id="btnSearch">
-              Search
+              Home
             </a>
           </li>
           <li className="nav-item" id="report">
