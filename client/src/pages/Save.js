@@ -3,6 +3,7 @@ import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import { Container } from "../components/Grid";
 import Saved from "../components/Saved";
+import Nav from "../components/Nav";
 
 class SaveBook extends Component {
   state = {
@@ -26,6 +27,7 @@ class SaveBook extends Component {
   render() {
     return (
       <>
+      <Nav/>
         <Jumbotron>
           <h1 className="text-white">Google Books Search</h1>
           <h3 className="text-white">Search for and Save Books of Interest</h3>

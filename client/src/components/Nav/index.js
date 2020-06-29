@@ -1,10 +1,13 @@
 import React from "react";
+import { Container } from "../Grid";
 import "./style.css";
 
 function Nav() {
   return (
+
     <nav className="navbar navbar-expand-lg navbar-dark">
-      <a className="navbar-brand ml-5" href="/">
+      <Container>
+      <a className="navbar-brand" href="/">
         GOOGLE BOOKS
       </a>
       <button
@@ -21,19 +24,20 @@ function Nav() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav d-flex  ml-auto mt-2 mt-lg-0">
           <li className="nav-item" id="home">
-            <a className="nav-link" href="/" id="btnSearch">
+            <a className="nav-link mr-4" href="/" id="btnSearch">
               Search
             </a>
           </li>
-
-          <li className="nav-item mr-5" id="report">
+          <li className="nav-item" id="report">
             <a className="nav-link" href="/saved" id="btnSaved">
-              Saved
+              View Saved Books
             </a>
           </li>
         </ul>
       </div>
+      </Container>
     </nav>
+    
   );
 }
 

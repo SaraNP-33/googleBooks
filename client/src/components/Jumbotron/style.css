@@ -1,13 +1,15 @@
 .jumbotron {
   background-image: url("https://cdn.pixabay.com/photo/2017/06/27/13/53/books-2447391_1280.jpg");
+  opacity: 0.65;
+  color: white;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 450px !important;
   width: 100%;
   padding-top: 10;
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Merriweather', serif;
   border-radius: 0;
+  /* margin-top: -6vh; */
 }

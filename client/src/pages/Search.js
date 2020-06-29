@@ -4,11 +4,12 @@ import Jumbotron from "../components/Jumbotron";
 import { Container, Row, Col } from "../components/Grid";
 import Form from "../components/Form";
 import Search from "../components/Search";
+import Nav from "../components/Nav"
 
 class SearchBooks extends Component {
   //initial state
   state = {
-    search: "",
+    search: "Pride & Prejudice",
     books: [],
     error: "",
     message: "",
@@ -68,6 +69,7 @@ class SearchBooks extends Component {
   render() {
     return (
       <>
+      <Nav />
         <Jumbotron>
           <h1 className="text-white">Google Books Search</h1>
           <h3 className="text-white">Search for and Save Books of Interest</h3>

@@ -1,25 +1,20 @@
 .navbar {
-  background-color: #486666;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #636D68;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-brand {
-  color: whitesmoke;
-}
-
-#btnSearch {
-  color: whitesmoke;
-  /* text-decoration: none; */
-}
-
-#btnSaved {
-  color: whitesmoke;
-  /* background-color: #0f4c5c; */
-}
-
-.burger {
   color: white;
-  /* background-color: white; */
-  /* z-index: 999; */
+  cursor: default;
 }
+
+#btnSaved,
+#btnSearch {
+  color: white;
+}
+
+#btnSaved:hover,
+#btnSearch:hover {
+  font-size: 1.1rem;
+}
+

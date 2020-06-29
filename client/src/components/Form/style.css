@@ -1,20 +1,21 @@
 form {
-  background: #664857;
-  border-radius: 2px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  border: 2px solid #636d68;
 }
 .BookSearchLabel {
-  margin-left: 20px;
-  margin-top: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-left: 3vw;;
+  margin-top: 2vh;;
 }
 .submitBtn {
-  background-color: #486666 !important;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #608773 !important;
+  color: white;
 }
+
+.submitBtn:hover {
+  color: white;
+  font-size: 1.1rem;
+}
+
 .form-control {
   margin-left: 20px;
   width: 95%;
@@ -22,4 +23,8 @@ form {
 
 .input {
   width: 90%;
+}
+
+h2{
+  color: #636d68;
 }

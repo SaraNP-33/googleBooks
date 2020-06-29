@@ -1,37 +1,41 @@
-.card {
-  background-color: #664857;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 20px;
+* {
+  font-family: 'Montserrat', sans-serif;
+  color: #636d68;
+  }
+
+.searchContainer {
+  padding-bottom: 7vh;
 }
 
-.saved-list {
-  padding: 20px;
-  background-color: #e5e8ed;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+.card {
+  width: 100%;
+  padding-bottom: 2vh;
+  border: 2px solid #636d68;
+}
+
+.card-image {
+  padding-left: 5vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.card-title {
+  font-family: 'Merriweather', serif;
+  color: #636d68;
 }
 
 .deleteBook {
-  margin-left: 10px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: whitesmoke;
-  background-color: #418080 !important;
+  background-color: #608773;
+  color: white;
+  margin-right: 3vw;
 }
 
 .viewBook {
-  margin-left: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: whitesmoke;
-  background-color: #486666 !important;
+  background-color: #C47E9E !important;
+  color: white;
 }
+
 
 #results {
-  color: whitesmoke;
-}
-
-h3 {
-  color: black;
+  color:#636d68;
 }

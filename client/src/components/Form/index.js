@@ -15,14 +15,14 @@ const Form = (props) => {
           value={props.search}
           type="text"
           name="searchBook"
-          placeholder="EX: Harry Potter"
+          placeholder="Pride & Prejudice"
           onChange={props.handleInputChange}
         />
       </div>
       <div className="form-group row col-sm-12 justify-content-end">
         <button
           type="submit"
-          className="btn btn-light submitBtn mb-3"
+          className="btn btn-light submitBtn mb-3 mr-3"
           onClick={props.handleFormSubmit}
         >
           Search
