@@ -75,3 +75,9 @@ Just as we did with concurrently, in order for this package to work we need to m
  "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev"
  ```
 
+# Code Highlights
+
+To make this application functional, there is a lot of code and logic behind it to make it work. However, sometimes the beauty is in the details. Here we want to highlight how when the user clicks ![save](./images/savebtn.png) , the button text changes to ![saved](./images/saved.png).
+
+
+
