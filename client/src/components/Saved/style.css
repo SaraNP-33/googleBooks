@@ -49,6 +49,11 @@
   font-size: 1.05rem;
 }
 
+.backToSearchBtn:active {
+  color: white !important;
+  font-size: 1rem;
+}
+
 
 #results {
   color:#636d68;

@@ -16,7 +16,12 @@ form {
 
 .submitBtn:hover {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+}
+
+.submitBtn:active {
+  color: white !important;
+  font-size: 1rem;
 }
 
 .input {

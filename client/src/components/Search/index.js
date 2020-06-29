@@ -32,7 +32,7 @@ const Search = (props) => {
                   className="saveBook btn btn-light ml-auto mr-2"
                   id={book.id} 
                   onClick={(event) => props.handleSavedButton(event)}
-                > Save Book
+                > {book.buttonText}
                 </button>
 
                 <a href="/saved">

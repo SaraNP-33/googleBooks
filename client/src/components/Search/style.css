@@ -37,6 +37,12 @@
   font-size: 1.05rem;
 }
 
+.saveBook:active {
+  background-color: #608773 !important;
+  color: white !important;
+  font-size: 1rem;
+}
+
 .viewSavedBtn {
   background-color: #C47E9E !important;
   color: white;
@@ -46,6 +52,12 @@
   background-color: #C47E9E !important;
   color: white;
   font-size: 1.05rem;
+}
+
+.viewSavedBtn:active {
+  background-color: #C47E9E !important;
+  color: white !important;
+  font-size: 1rem;
 }
 
 #results {

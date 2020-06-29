@@ -13,7 +13,6 @@ class SearchBooks extends Component {
     books: [],
     error: "",
     message: "",
-    text: "Save Book"
   };
 
   //function for search bar
@@ -43,6 +42,7 @@ class SearchBooks extends Component {
               description: result.volumeInfo.description,
               image: result.volumeInfo.imageLinks.thumbnail,
               link: result.volumeInfo.infoLink,
+              buttonText: "Save Book"
             };
             return result;
           });
@@ -64,7 +64,16 @@ class SearchBooks extends Component {
     savedBooks = savedBooks[0];
     console.log(savedBooks);
     API.saveBook(savedBooks)
-      .then(this.setState({ text: "Saved!" }))
+      .then(this.setState({ books: this.state.books.map(book=>{
+        if (book.id === event.target.id){
+          return {
+            ...book, buttonText: "Saved!"
+          }
+        } else {
+          return book;
+        }
+      })
+     }))
       .catch((err) => console.log("ERROR", err));
   };
   render() {
