@@ -122,7 +122,7 @@ If the button is not clicked then just render the regular text.
 
  Our application was deployed in Heroku. Feel free to visit by clicking the link below.
 
- [Google Books](https://google-books-search-171113.herokuapp.com/)
+ + [Google Books](https://google-books-search-171113.herokuapp.com/)
 
 # Authors
 + Lindsey Tummond: [Portfolio]( https://lindseytummond.github.io/portfolio/)
