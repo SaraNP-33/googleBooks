@@ -1,7 +1,8 @@
 # Google Book Search
 
-This app allows users to search for any book and save their favorite ones, and eventually delete them if they so choose too.  
-To accomplish this, this app uses axios to call on the Google Books API and deliver the content the user is searching for, **MongoDb** as the nonrelational database used to store the user's favorite books and **React** to create the beautifully functional front-end. To enable the communication between our front-end and our back-end database, we use **Express** as our server and **Mongoose** to create our database Schema. 
+This app allows users to search for any book and save their favorite ones, and eventually delete them if they so choose too.
+
+To accomplish this, this app uses axios to call on the **Google Books API** and deliver the content the user is searching for, **MongoDb** as the nonrelational database used to store the user's favorite books and **React** to create the beautifully functional front-end. To enable the communication between our front-end and our back-end database, we use **Express** as our server and **Mongoose** to create our database Schema. 
 
 ## Sample Images
 
@@ -11,7 +12,7 @@ When the user wants to search for a book, they simply have to type up what book 
 
 # Getting Started
 
-To build this application we used a MERN (Mongo, Express, React, Node) structure. There were a number of packages that needed to be installed so we could effectively work both on the back-end and the front-end. 
+To build this application we used a **MERN (Mongo, Express, React, Node)**structure. There were a number of packages that needed to be installed so we could effectively work both on the back-end and the front-end. 
 
 ## Back-End
 
@@ -126,7 +127,7 @@ If the button is not clicked then just render the regular text.
 
 # Authors
 + Lindsey Tummond: [Portfolio]( https://lindseytummond.github.io/portfolio/)
-- Niasha Ablago-Grant: [Portfolio]
+- Niasha Ablago-Grant: [Portfolio]( https://niashagrant.github.io/updatedPortfolio/)
 + Jennifer Kruk : [Portfolio](https://jenkruk.github.io/Portfolio/)
 - Sara Neves Pereira: [Portfolio]( https://saranp-33.github.io/bootstrap-portfolio/)
 
