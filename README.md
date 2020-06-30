@@ -11,7 +11,7 @@ When the user wants to search for a book, they simply have to type up what book 
 ![searchBooks](./images/userSearch2.gif)
 
 
-The user can choose from the results the books they want to save as their favorite. When they click on the button **Save Book**, the text of the button will change to reflect the action taken. This will save the book to our Mongo database.
+The user can choose from the results the books they want to save as their favorite. When they click on the button **Save Book**, the text of the button will change to reflect the action taken. This will save the book to the Mongo database.
 
 ![saveBook](./images/saveBook2.gif)
 
