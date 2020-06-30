@@ -27,7 +27,7 @@ The user can then travel to the Saved Books page just by clicking on the **View 
 ![homePage](./images/homePage.gif)
 
 
-Once in the View Saved Books page, the user can also choose to delete some of the books they saved. this action will delete the books stored in the Mongo database. 
+Once in the View Saved Books page, the user can also choose to delete some of the books they saved. This action will delete the books stored in the Mongo database. 
 
 ![delBook](./images/delBook.gif)
 
