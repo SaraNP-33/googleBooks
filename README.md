@@ -8,7 +8,31 @@ To accomplish this, this app uses axios to call on the **Google Books API** and 
 
 When the user wants to search for a book, they simply have to type up what book (or author) they are searching for and hit Search. The button search will then send a request with axios and it's promise based response will deliver the results that are then rendered on the page as seen below. 
 
-![searchBooks](./images/bookSearch.gif)
+![searchBooks](./images/userSearch2.gif)
+
+
+The user can choose from the results the books they want to save as their favorite. When they click on the button **Save Book**, the text of the button will change to reflect the action taken. This will save the book to our Mongo database.
+
+![saveBook](./images/saveBook2.gif)
+
+
+The user can then travel to the Saved Books page just by clicking on the **View Saved Books** button. They also can go back to **Home** by clicking the button Back to Search Page. This buttons use the React- Router-Dom giving the front end pages routes to help better transition the user from one page to another. 
+
+![savedPage](./images/savedPage.gif)
+
+![homePage](./images/homePage.gif)
+
+
+Once in the View Saved Books page, the user can also choose to delete some of the books they saved. this action will delete the books stored in the Mongo database. 
+
+![delBook](./images/delBook.gif)
+
+
+The buttons on the cards are not the only way the users can transition from one page to another. Our Navbar elements also uses the React-Router-Dom. So when clicking on them, the user will go to the assigned page to find another element they can click to return to the page they just left. 
+
+![navBar](./images/navBar.gif)
+
+____
 
 # Getting Started
 
