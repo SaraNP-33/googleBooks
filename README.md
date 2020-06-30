@@ -18,7 +18,11 @@ The user can choose from the results the books they want to save as their favori
 
 The user can then travel to the Saved Books page just by clicking on the **View Saved Books** button. They also can go back to **Home** by clicking the button Back to Search Page. This buttons use the React- Router-Dom giving the front end pages routes to help better transition the user from one page to another. 
 
+**View Saved Books Button:**
+
 ![savedPage](./images/savedPage.gif)
+
+**Go Back To Search Page Button:**
 
 ![homePage](./images/homePage.gif)
 
